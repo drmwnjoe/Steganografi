@@ -1,7 +1,7 @@
 # Tugas Kriptografi
 * Nama: Joelianto Darmawan(Ketua)(20230410500025), Annisa Hardian Faradela (20230410500007), Adinda Puteri Aulia (2022D1E057)
 * Kelas A
-* 
+
 #  Steganografi Gambar Menggunakan Metode LSB
 
 Proyek ini merupakan implementasi teknik steganografi digital menggunakan metode Least Significant Bit (LSB) untuk menyembunyikan sebuah data gambar rahasia ke dalam gambar lain (cover image) menggunakan bahasa pemrograman Python.
@@ -10,7 +10,7 @@ Teknik ini memungkinkan penyisipan data tanpa mengubah tampilan visual secara si
 
 ##  Deskripsi Data yang Digunakan:
 
-###  Data Penampung (Wadah.png) ukuran gambar 736 x 1465 px, 1.1 MB
+###  Data Penampung (wadah.png) ukuran gambar 736 x 1465 px, 1.1 MB
 
 Gambar yang digunakan sebagai wadah adalah sebuah citra digital berformat **PNG** yang menampilkan beberapa kucing dengan latar belakang langit. Gambar ini memiliki karakteristik sebagai berikut:
 
