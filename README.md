@@ -1,55 +1,76 @@
-# Steganografi
-# 🔐 Steganografi Gambar Menggunakan Metode LSB (Python)
+# Tugas Kriptografi
+* Nama: Joelianto Darmawan(Ketua)(20230410500025), Annisa Hardian Faradela (20230410500007), Adinda Puteri Aulia (2022D1E057)
+* Kelas A
+* 
+#  Steganografi Gambar Menggunakan Metode LSB
 
-Proyek ini merupakan implementasi teknik steganografi digital menggunakan metode Least Significant Bit (LSB) untuk menyembunyikan sebuah gambar rahasia ke dalam gambar lain (cover image) menggunakan bahasa pemrograman Python.
+Proyek ini merupakan implementasi teknik steganografi digital menggunakan metode Least Significant Bit (LSB) untuk menyembunyikan sebuah data gambar rahasia ke dalam gambar lain (cover image) menggunakan bahasa pemrograman Python.
 
 Teknik ini memungkinkan penyisipan data tanpa mengubah tampilan visual secara signifikan, sehingga keberadaan pesan sulit dideteksi oleh manusia.
 
-## 🎯 Tujuan
+##  Deskripsi Data yang Digunakan:
 
-* Mengimplementasikan konsep steganografi pada citra digital
-* Menyembunyikan gambar rahasia ke dalam gambar penampung
-* Mengembalikan (decode) gambar rahasia dari hasil steganografi
+###  Data Penampung (Wadah.png) ukuran gambar 736 x 1465 px, 1.1 MB
 
-## ⚙️ Cara Kerja Sistem
+Gambar yang digunakan sebagai wadah adalah sebuah citra digital berformat **PNG** yang menampilkan beberapa kucing dengan latar belakang langit. Gambar ini memiliki karakteristik sebagai berikut:
 
-### 📥 Encoding (Menyembunyikan Gambar)
+* Memiliki resolusi tinggi sehingga mampu menampung data dalam jumlah besar
+* Mengandung banyak variasi warna (warna alami kucing dan langit)
+* Memiliki detail tekstur yang kompleks
+
+
+###  Data yang Disembunyikan (data secret.png) ukuran gambar 694 x 825 pixel, 375,7 KB
+
+Data yang disembunyikan berupa sebuah gambar yang berisi **tabel data mahasiswa** dengan informasi sebagai berikut:
+
+* Nama Mahasiswa
+* Nomor Induk Mahasiswa (NIM)
+* Program Studi (Prodi)
+
+Karakteristik data ini:
+
+* Berbentuk citra (image-based data), bukan teks langsung
+* Memiliki kontras tinggi (teks hitam di atas latar terang)
+* Mengandung informasi penting yang bersifat struktural
+
+##  Cara Kerja Sistem
+
+###  Encoding (Menyembunyikan Gambar)
 
 1. Membaca gambar penampung (`wadah.png`)
-2. Membaca gambar rahasia (`secret.png`)
+2. Membaca gambar rahasia (` data secret.png`)
 3. Mengambil 4 bit paling signifikan dari gambar rahasia
 4. Mengganti 4 bit terakhir pada gambar penampung
-5. Menghasilkan gambar baru (`output.png`)
+5. Menghasilkan gambar baru (`output secret.png`)
 
 ---
 
-### 📤 Decoding (Mengambil Gambar)
+###  Decoding (Mengambil Gambar)
 
-1. Membaca gambar hasil steganografi (`output.png`)
+1. Membaca gambar hasil steganografi (`output secret.png`)
 2. Mengambil 4 bit terakhir dari setiap pixel
 3. Menggeser bit untuk membentuk kembali gambar
-4. Menghasilkan gambar rahasia (`recovered.png`)
+4. Menghasilkan gambar rahasia (`recovered secret.png`)
 
 ---
 
-## 📂 Struktur Folder
+##  Struktur Folder
 
 ```
-steganografi-image-python/
+Steganografi/
 │
 ├── wadah.png
-├── secret.png
-├── output.png
-├── recovered.png
+├── data secret.png
+├── output secret.png
+├── recovered secret.png
 ├── encode.py
 ├── decode.py
-├── kompress.py
 ├── README.md
 ```
 
 ---
 
-## ▶️ Cara Menjalankan
+##  Cara Menjalankan
 
 ### 1. Install Library
 
@@ -69,14 +90,9 @@ python encode.py
 python decode.py
 ```
 
-## 📸 Hasil
+##  Hasil
 
 * **Gambar Wadah** → wadah.png
-* **Gambar Rahasia** → secret.png
-* **Hasil Steganografi** → output.png
-* **Hasil Decode** → recovered.png
-
-## 👨‍💻 Identitas
-
-* Nama: Joelianto Darmawan(Ketua)(20230410500025), Annisa Hardian Faradela (20230410500007), Adinda Puteri Aulia (2022D1E057)
-* Mata Kuliah: Kriptografi
+* **Gambar Rahasia** → data secret.png
+* **Hasil Steganografi** → output secret.png
+* **Hasil Decode** → recovered secret.png
