@@ -16,14 +16,13 @@ def encode_image(cover_path, secret_path, output_path):
             r1, g1, b1 = cover_pixels[x, y]
             r2, g2, b2 = secret_pixels[x, y]
 
-            # ambil 4 bit dari masing-masing
-            r = (r1 & 0xF0) | (r2 >> 4)
-            g = (g1 & 0xF0) | (g2 >> 4)
-            b = (b1 & 0xF0) | (b2 >> 4)
+            r = (r1 & ~1) | (r2 >> 7)
+            g = (g1 & ~1) | (g2 >> 7)
+            b = (b1 & ~1) | (b2 >> 7)
 
             cover_pixels[x, y] = (r, g, b)
 
     cover.save(output_path)
     print("Gambar berhasil disembunyikan!")
     
-encode_image("wadah.png", "secret.png", "output.png")
+encode_image("wadah.png", "data secret.png", "output secret.png")

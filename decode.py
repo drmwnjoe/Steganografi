@@ -12,13 +12,13 @@ def decode_image(stego_path, output_path):
         for y in range(height):
             r, g, b = pixels[x, y]
 
-            r_new = (r & 0x0F) << 4
-            g_new = (g & 0x0F) << 4
-            b_new = (b & 0x0F) << 4
+            r_new = (r & 1) * 255
+            g_new = (g & 1) * 255
+            b_new = (b & 1) * 255
 
             new_pixels[x, y] = (r_new, g_new, b_new)
 
     new_image.save(output_path)
     print("Gambar berhasil diambil!")
 
-decode_image("output.png", "recovered.png")
+decode_image("output secret.png", "recovered secret.png")
