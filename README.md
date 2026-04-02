@@ -10,7 +10,7 @@ Teknik ini memungkinkan penyisipan data tanpa mengubah tampilan visual secara si
 
 ##  Deskripsi Data yang Digunakan:
 
-###  Data Penampung (wadah.png) ukuran gambar 736 x 1465 pixel, 1.1 MB
+###  Data Penampung (wadah.png) ukuran gambar 736 x 1465 pixel, 1.09 MB
 
 Gambar yang digunakan sebagai wadah adalah sebuah citra digital berformat **PNG** yang menampilkan beberapa kucing dengan latar belakang langit. Gambar ini memiliki karakteristik sebagai berikut:
 
@@ -32,6 +32,8 @@ Karakteristik data ini:
 * Berbentuk citra (image-based data), bukan teks langsung
 * Memiliki kontras tinggi (teks hitam di atas latar terang)
 * Mengandung informasi penting yang bersifat struktural
+
+### Hasil menjadi output secret.png dengan ukuran gambar 736 x 1465 pixel, 1.05 MB
 
 ##  Cara Kerja Sistem
 
